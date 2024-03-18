@@ -408,4 +408,171 @@ sequenceDiagram
     DB-->>S: 결제 정보 저장 완료
     S-->>U: 결제 완료(true)
 
+```
 
+데이터 스트럭처
+├─main
+│  ├─java
+│  │  └─com
+│  │      └─dyes
+│  │          └─backend
+│  │              ├─config
+│  │              ├─domain
+│  │              │  ├─admin
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      └─request
+│  │              │  ├─authentication
+│  │              │  │  ├─controller
+│  │              │  │  └─service
+│  │              │  │      ├─google
+│  │              │  │      │  └─response
+│  │              │  │      ├─kakao
+│  │              │  │      │  ├─response
+│  │              │  │      │  └─service
+│  │              │  │      └─naver
+│  │              │  │          └─response
+│  │              │  ├─cart
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─reponse
+│  │              │  │      └─request
+│  │              │  ├─delivery
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      └─request
+│  │              │  ├─event
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─request
+│  │              │  │      │  ├─delete
+│  │              │  │      │  ├─modify
+│  │              │  │      │  └─register
+│  │              │  │      └─response
+│  │              │  ├─farm
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─request
+│  │              │  │      └─response
+│  │              │  │          └─form
+│  │              │  ├─farmproducePriceForecast
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─request
+│  │              │  │      └─response
+│  │              │  ├─inquiry
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─request
+│  │              │  │      └─response
+│  │              │  │          └─read
+│  │              │  ├─order
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─admin
+│  │              │  │      │  └─response
+│  │              │  │      │      └─form
+│  │              │  │      └─user
+│  │              │  │          ├─request
+│  │              │  │          └─response
+│  │              │  │              └─form
+│  │              │  ├─payment
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─request
+│  │              │  │      └─response
+│  │              │  ├─product
+│  │              │  │  ├─controller
+│  │              │  │  │  ├─admin
+│  │              │  │  │  │  └─form
+│  │              │  │  │  └─user
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─admin
+│  │              │  │      │  ├─request
+│  │              │  │      │  │  ├─delete
+│  │              │  │      │  │  ├─modify
+│  │              │  │      │  │  └─register
+│  │              │  │      │  └─response
+│  │              │  │      │      └─form
+│  │              │  │      └─user
+│  │              │  │          └─response
+│  │              │  │              └─form
+│  │              │  ├─recipe
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─request
+│  │              │  │      └─response
+│  │              │  │          └─form
+│  │              │  ├─review
+│  │              │  │  ├─controller
+│  │              │  │  │  └─form
+│  │              │  │  ├─entity
+│  │              │  │  ├─repository
+│  │              │  │  └─service
+│  │              │  │      ├─request
+│  │              │  │      └─response
+│  │              │  │          └─form
+│  │              │  └─user
+│  │              │      ├─controller
+│  │              │      │  └─form
+│  │              │      ├─entity
+│  │              │      ├─repository
+│  │              │      └─service
+│  │              │          ├─request
+│  │              │          └─response
+│  │              │              └─form
+│  │              └─utility
+│  │                  ├─common
+│  │                  ├─nickName
+│  │                  ├─number
+│  │                  ├─provider
+│  │                  └─redis
+│  └─resources
+└─test
+    └─java
+        └─com
+            └─dyes
+                └─backend
+                    ├─adminTest
+                    ├─cartTest
+                    ├─eventTest
+                    ├─farmproducePriceForecastTest
+                    ├─farmTest
+                    ├─inquiryTest
+                    ├─orderTest
+                    ├─paymentTest
+                    ├─productTest
+                    │  ├─admin
+                    │  └─user
+                    ├─reviewTest
+                    └─userTest
