@@ -368,3 +368,44 @@ FastAPI 초기 설정
 CI, CD 파이프라인 구축
 EC2 인스턴스 배포
 AWS S3 저장소 설정
+
+```mermaid
+sequenceDiagram
+    participant U as 사용자
+    participant S as 시스템
+    participant DB as 데이터베이스
+    participant R as Redis
+    participant K as Kakao 결제 서버
+
+    U->>S: 아이템 장바구니에 담기 요청
+    S->>DB: 아이템 조회
+    DB-->>S: 아이템 정보
+    S-->>U: 장바구니 리스트 반환
+
+    U->>S: 장바구니 업데이트(수량 변경, 삭제, 추가)
+    S->>DB: 업데이트된 아이템 조회
+    DB-->>S: 업데이트된 아이템 정보
+    S-->>U: 업데이트된 장바구니 리스트 반환
+
+    alt 바로 구매
+        U->>S: 바로 구매 요청
+        S->>DB: 아이템 조회
+        DB-->>S: 아이템 정보
+    else 장바구니에서 구매
+        U->>S: 장바구니에서 구매 요청
+    end
+
+    S->>R: 결제 정보를 Redis에 임시 저장
+    S->>K: 결제 정보 및 결제 요청 전달
+    K-->>S: 결제 확인 요청
+    S-->>U: 확인 토큰
+    U->>S: 확인 토큰 입력 및 결제 확정
+    S->>R: 토큰으로 결제정보 조회
+    R-->>S: 결제 정보 get
+    S->>K: 결제 확정
+    K-->>S: 결제 성공 확정
+    S-->>DB: 결제 정보 저장
+    DB-->>S: 결제 정보 저장 완료
+    S-->>U: 결제 완료(true)
+
+
