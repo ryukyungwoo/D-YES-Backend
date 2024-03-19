@@ -1,16 +1,18 @@
 # TT Market - Tomorrow to Twentydays Market
 <br />
 <br />
-
-![TT Market 대문 이미지](https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/banner.jpg)
 <br />
 <br />
-
+<img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/banner.jpg" width="75%" alt="TT Market 대문 이미지">
+<br />
+<br />
+<br />
+<br />
 
 ## 프로젝트 기획 의도
 
-![프로젝트 설명 이미지 1](https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/1.png)
-![프로젝트 설명 이미지 2](https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EA%B8%B0%ED%9A%8D%EC%9D%98%EB%8F%84%202.png)
+<img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/1.png" width="75%" alt="프로젝트 설명 이미지 1">
+<img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EA%B8%B0%ED%9A%8D%EC%9D%98%EB%8F%84%202.png" width="75%" alt="프로젝트 설명 이미지 2">
 
 TT Market은 다양한 데이터 분석을 통해 농산물 가격을 예측하고, 사용자가 효과적인 구매 결정을 할 수 있도록 돕는 통합 쇼핑몰 서비스를 생각하고 제작하였습니다. <br />
 다음날부터 2주 후까지의 가격을 제공한다고해서 tomorrow to twenty days 즉 ttmarket 입니다
@@ -23,10 +25,12 @@ TT Market은 다양한 데이터 분석을 통해 농산물 가격을 예측하�
 
 TT Market을 통해 사용자들은 농산물 구매에서 보다 정보에 기반한 결정을 내릴 수 있게 되었습니다.<br />
 
-<br />
-<br />
-<br />
 
+---
+
+
+<br />
+<br />
 
 ## Tech Stack
 
@@ -52,32 +56,49 @@ TT Market을 통해 사용자들은 농산물 구매에서 보다 정보에 기�
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
 
 
-
-
-
-
-
+---
 
 <br />
 <br />
-<br />
+
+
 ## 기능 요약
 
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/6.jpg" width="75%" /><br /><br />
 
-<img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/5.jpg" width="75%" /><br /><br />
-<br />  <br />  <br />  
+<img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/5.jpg" width="75%" />
+
+
+---
+
+<br />
+<br />
+
+
 ## 팀원 구성
 
 | 정다운(팀장) | 유경우 | 김형진 | 윤주아 |
 |:---:|:---:|:---:|:---:|
-| ![정다운](프로필사진URL) | ![유경우](프로필사진URL) | ![김형진](프로필사진URL) | ![윤주아](프로필사진URL) |
-| [GitHub](깃헙링크) | [GitHub](깃헙링크) | [GitHub](깃헙링크) | [GitHub](깃헙링크) |
+| ![정다운](https://avatars.githubusercontent.com/u/116337332?v=4) | ![유경우](https://avatars.githubusercontent.com/u/84391453?v=4) | ![김형진](https://avatars.githubusercontent.com/u/92012512?v=4) | ![윤주아](https://avatars.githubusercontent.com/u/128335528?v=4) |
+| [GitHub](https://github.com/jeongdawun) | [GitHub](https://github.com/ryukyungwoo) | [GitHub](https://github.com/bbbii) | [GitHub](https://github.com/dbswndk) |
+
+
+
+---
+
+<br />
+<br />
 
 ## 진행 일정
 
-![진행 일정](https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%A7%84%ED%96%89%EC%9D%BC%EC%A0%95.png)  
+<img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%A7%84%ED%96%89%EC%9D%BC%EC%A0%95.png" width="75%" alt="진행 일정">
 **2023년 8월 1일 → 2023년 10월 6일**
+
+
+---
+
+<br />
+<br />
 
 ## 역할 분담
 
@@ -102,65 +123,91 @@ TT Market을 통해 사용자들은 농산물 구매에서 보다 정보에 기�
 - 농산물 가격 예측 및 레시피 관련 작업
 - 관리자 페이지 및 UI 컴포넌트 개발
 
+
+---
+
+
 <br />
 <br />
 
 ## 프로젝트 기능 설명
 
-### 시작 화면
+<details>
+<summary><strong>시작 화면</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/ttmarket.jpg" width="75%" /><br />  
 서비스에 들어오면 상단에는 카테고리, 중단에는 크로셀과 신상품 알림, 하단에는 가격 예측 테이블이 위치하고 있습니다.<br /><br />
-- 신상품 알림: <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%8B%A0%EC%83%81%ED%92%88%20%EC%B6%94%EC%B2%9C.png" width="75%" /><br /> 최근에 등록된 상품 4개가 추천됩니다.<br /><br />
-- 가격 예측 테이블: <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%B0%A8%ED%8A%B81.png" width="75%" /> <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%B0%A8%ED%8A%B82.png" width="75%" /><br /> 표와 그래프 모드를 전환할 수 있는 토글과 각종 야채의 종류에 따라 그래프색이 달라집니다.<br /><br />
-
-### 회원가입 및 로그인
+- 신상품 알림: <br /><img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%8B%A0%EC%83%81%ED%92%88%20%EC%B6%94%EC%B2%9C.png" width="75%" /><br /> 최근에 등록된 상품 4개가 추천됩니다.<br /><br />
+- 가격 예측 테이블: <br /><img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%B0%A8%ED%8A%B81.png" width="75%" /> <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%B0%A8%ED%8A%B82.png" width="75%" /><br /> 표와 그래프 모드를 전환할 수 있는 토글과 각종 야채의 종류에 따라 그래프색이 달라집니다.<br /><br />
+</details>
+<details>
+<summary><strong>회원가입 및 로그인</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EB%B0%8F%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.png" width="75%" /><br />  
 회원 가입 및 로그인은 모두 oauth로 진행하도록 하였습니다. 최초 가입시 oauth 서버에서 최소한의 정보만 가져오게 하고, 전화번호나 주소 등 나머지 정보는 사용자의 의지에 따라 입력하도록 하였습니다.<br /><br />
+</details>
+<details>
+<summary><strong>상품 리스트</strong></summary>
 
-### 상품 리스트
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%83%81%ED%92%88%20%EC%9D%B8%EB%8D%B1%EC%8A%A4.png" width="75%" /><br />  
 상품리스트는 상품의 재배 방법과 어떤 농가에서 생산된 제품인지, 제품 이미지와 리뷰 및 할인률을 볼 수 있습니다. 생산지나 재배 방법, 야채의 종류에 따라 필터링이 가능합니다.<br /><br />
-
-### 공동구매
+</details>
+<details>
+<summary><strong>공동구매</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EA%B3%B5%EB%8F%99%EA%B5%AC%EB%A7%A4.png" width="75%" /><br />  
 공동 구매 상품은 달성량에 따라 할인률이 커지는 상품입니다. 현재 참여인원과 남은 일자를 볼 수 있습니다.<br /><br />
-
-### 상품 상세보기
+</details>
+<details>
+<summary><strong>상품 상세보기</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0.png" width="75%" /><br />  
 상품 상세보기 페이지에서는 대표 이미지와 상세 이미지들, 기본적인 옵션, 개수 등을 지정하여 장바구니에 넣거나 바로 구입할 수 있습니다.<br /><br />
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%83%81%ED%92%88%20%EC%83%81%EC%84%B8%20%EC%A0%95%EB%B3%B4.png" width="75%" /><br />  
 하단에는 상품 상세 설명을 등록자가 직접 기입할 수 있습니다.<br /><br />
-
-### 장바구니
+</details>
+<details>
+<summary><strong>장바구니</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88.png" width="75%" /><br />  
 사용자가 상품을 담으면 리스트 형태로 서버에 임시 저장되며, 체크 박스와 -, + 버튼으로 상품의 상태를 업데이트 및 삭제할 수 있습니다. 가격 밑에는 전체상품 주문과 선택 상품 주문 버튼을 나누어 선택적 주문을 할 수 있게 하였습니다.<br /><br />
-
-### 주문하기
+</details>
+<details>
+<summary><strong>주문하기</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%A3%BC%EB%AC%B8%ED%95%98%EA%B8%B0.png" width="75%" /><br />  
 주문하기 페이지에서는 장바구니의 상품을 주문할 수 있으며, 주소나 전화번호 등 사용자 정보를 기입하거나 업데이트 할 수 있습니다.<br /><br />
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B2%B0%EC%A0%9C.png" width="75%" /><br />  
 결제는 카카오 결제 API를 사용하였습니다.<br /><br />
-
-### 주문 목록
+</details>
+<details>
+<summary><strong>주문 목록</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%A3%BC%EB%AC%B8%EB%AA%A9%EB%A1%9D.png" width="75%" /><br />  
 주문한 상품에 따라 배송중이라면 주문 취소 요청 버튼이, 주문이 완료되었다면 환불 버튼이 나옵니다. 리뷰하기 버튼도 주문 완료 후 활성화됩니다.<br /><br />
-
-### 레시피
+</details>
+<details>
+<summary><strong>레시피</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EB%A0%88%EC%8B%9C%ED%94%BC.png" width="75%" /><br />  
 레시피 페이지에서는 요리의 제목과 이미지, 조리 내용 등을 기입할 수 있습니다. 댓글 기능을 통해 사용자 간 의견을 나눌 수 있습니다.<br /><br />
-
-### 문의하기
+</details>
+<details>
+<summary><strong>문의하기</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EB%AC%B8%EC%9D%98.png" width="75%" /><br />  
 사용자는 관리자에게 문의를 남길 수 있으며, 답변 완료 시 이메일 알림을 받습니다.<br /><br />
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EB%AC%B8%EC%9D%98%20%EB%82%B4%EC%97%AD.png" width="75%" /><br />  
 자신이 문의했던 내용과 답변을 확인할 수 있습니다.<br /><br />
-
-### 관리자 페이지
+</details>
+<details>
+<summary><strong>관리자 페이지</strong></summary>
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EA%B4%80%EB%A6%AC%EC%9E%90%20%ED%8E%98%EC%9D%B4%EC%A7%80.png" width="75%" /><br />  
 관리자는 메인 페이지에서 상품의 등록 현황, 주문 목록 등을 확인하고, 상품, 판매자, 주문 관리 등을 할 수 있습니다.
 <br />  <br />  
+</details>
+
+
+---
+
+
+<br />
+<br />
+
 
 ## 시퀀스 다이어그램 예시
+
 
 ```mermaid
 sequenceDiagram
@@ -203,8 +250,41 @@ sequenceDiagram
 
 ```
 
-### 계층 구조
 
+<details>
+<summary><strong>상품 결제 과정 예시</strong></summary>
+<p>
+
+상기의 시퀀스 다이어그램은 사용자가 시스템을 통해 상품을 장바구니에 담고, 장바구니를 업데이트한 후 결제하는 과정을 단계별로 설명합니다. 
+이 과정은 다음과 같이 세분화됩니다:
+
+- **장바구니 관리**
+  - 사용자는 상품을 장바구니에 추가하거나 장바구니 내 상품의 수량을 변경, 삭제 혹은 추가할 수 있습니다.
+  - 시스템은 데이터베이스를 통해 아이템 정보를 조회하고, 사용자에게 장바구니의 최신 상태를 반영하여 보여줍니다.
+
+- **결제 요청**
+  - 사용자가 '바로 구매' 혹은 '장바구니에서 구매' 옵션 중 하나를 선택합니다.
+  - 시스템은 결제 정보를 Redis에 임시로 저장하고 Kakao 결제 서버에 결제를 요청합니다.
+  - 사용자는 시스템으로부터 받은 확인 토큰을 이용하여 결제를 확정합니다.
+
+- **결제 완료 처리**
+  - Kakao 결제 서버로부터 결제 성공의 확정을 받은 시스템은 결제 정보를 데이터베이스에 저장합니다.
+  - 결제 과정이 완료되면 사용자에게 결제 완료를 알리며, 이는 성공적인 결제 흐름을 의미합니다.
+
+</p>
+</details>
+
+---
+
+
+<br />
+<br />
+
+
+## 백엔드 계층 구조
+
+<details>
+    
 ```markdown
 
 ├─main
@@ -372,3 +452,44 @@ sequenceDiagram
                     │  └─user
                     ├─reviewTest
                     └─userTest
+```
+
+도메인별 구분을 통해 각 기능과 책임을 명확히 하여 객체 지향 설계를 강화했습니다. 
+컨트롤러, 서비스, 레포지토리를 각 도메인별로 분리함으로써 캡슐화와 응집도를 높이고, 코드의 가독성과 유지보수성을 향상시켰습니다. 
+또한, 도메인별로 분리된 단위 테스트를 통해 각 컴포넌트의 독립적인 기능 검증을 강화하고, 시스템의 안정성을 보장하도록 하였습니다. 
+
+</details>
+
+---
+
+
+<br />
+<br />
+
+
+## 에이피아이 스펙
+
+<details>
+<summary><strong>장바구니 상품 담기 - POST /cart/contain</strong></summary>
+<br>
+
+- **HTTP Method**: POST
+- **URL**: `/cart/contain`
+- **BODY (요청 데이터)**:
+  ```json
+  {
+    "userToken": "your_user_token_here",
+    "request": {
+      "productOptionId": 12345,
+      "optionCount": 2
+    }
+  }
+Response Parameters (Response Sample): void (성공 시 특정 응답 본문 없음)
+Result Code: 200 OK for success; 400 Bad Request for invalid request
+</details>
+
+---
+
+<br />
+<br />
+
