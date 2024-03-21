@@ -91,8 +91,32 @@ TT Market을 통해 사용자들은 농산물 구매에서 보다 정보에 기�
 
 ## 진행 일정
 
+#### 2023년 8월 1일 → 2023년 10월 6일
+
 <img src="https://github.com/ryukyungwoo/D-YES-Backend/blob/main/images/%EC%A7%84%ED%96%89%EC%9D%BC%EC%A0%95.png" width="75%" alt="진행 일정">
-**2023년 8월 1일 → 2023년 10월 6일**
+1주차: 프로젝트의 초기 설정 및 서비스 기획 시작.
+2주차: 개발 환경 설정과 CI/CD 구축을 시작하여 서비스 기획 계속 진행.
+3주차부터 7주차: 주된 구현 기간으로, 프로젝트의 핵심 부분을 개발.
+8주차: 최종 점검을 실시하여 프로젝트를 마무리.
+9주차: 발표 준비와 최종 발표
+
+
+---
+
+
+<br />
+<br />
+
+## 일정 관리
+![image](https://github.com/ryukyungwoo/D-YES-Backend/assets/128555353/578f620b-bdad-495f-a0e8-38be44b33558)
+각 팀원의 업무 진행 상황을 명확하게 파악하고, 공동의 목표 달성을 위해 필요한 조정과 적응을 신속하게 수행할 수 있도록 했습니다. 회의를 통해 개별 작업 항목의 진행 상황, 직면한 도전 과제, 팀원 간의 협력 필요성 등을 논의함으로써, 프로젝트는 계획에 따라 차질 없이 진행되었고, 각 스프린트의 마무리에서는 성과를 평가하고 지속적인 개선을 위한 피드백을 제공
+![image](https://github.com/ryukyungwoo/D-YES-Backend/assets/128555353/43bd42de-2708-4300-bc99-f71d1df4a376)
+여기에는 팀의 To-Do 리스트, 진행 중인 작업, 완료된 작업 등이 명확히 구분되어 표시되어 있으며, 다양한 프로젝트 관리 방식과 통신 도구가 통합되어 팀의 협업과 효율성을 극대화하는 데 도움이 됩니다. 
+![image](https://github.com/ryukyungwoo/D-YES-Backend/assets/128555353/17b8ecdb-c1b3-4953-8292-d84316b1b7af)
+할 일 목록이 우선순위별로(P1, P2, P3, P4 등) 분류되어 있고, 각각의 작업에 대한 진행 상태(예: '진행 중', '대기 중', '완료' 등)가 표시되어 있어 작업의 중요성과 긴급성을 한눈에 파악할 수 있습니다. 이러한 방식으로 팀은 가장 중요한 작업에 집중하고, 자원을 효과적으로 배분하며, 프로젝트의 진행을 효율적으로 관리할 수 있습니다. 이는 프로젝트의 복잡성을 관리하고, 중요한 마일스톤을 놓치지 않으며, 명확한 우선순위 설정을 통해 팀이 목표를 달성하도록 돕는 효과적인 도구입니다.
+
+
+
 
 
 ---
@@ -113,15 +137,15 @@ TT Market을 통해 사용자들은 농산물 구매에서 보다 정보에 기�
 - 사용자 문의 및 리뷰 기능 개발
 - 이벤트 상품 페이지 작업
 
-### 🔧 김형진 | React & Infra
+### 🔧 김형진 | React 
+- 로그인, 회원 관리 및 프로필 기능 구현
 - OAuth 및 상품 관련 기능 구현
 - 조율 및 장바구니 기능 개발
-- 인프라 설정 및 CI/CD 파이프라인 구축
 
-### 👩‍💼 정다운 | Spring & React
-- 로그인, 회원 관리 및 프로필 기능 구현
+### 👩‍💼 정다운 | Spring & React & Infra
 - 농산물 가격 예측 및 레시피 관련 작업
 - 관리자 페이지 및 UI 컴포넌트 개발
+- 인프라 설정 및 CI/CD 파이프라인 구축
 
 
 ---
@@ -467,7 +491,7 @@ sequenceDiagram
 <br />
 
 
-## 에이피아이 스펙
+## 주요 에이피아이 스펙
 
 <details>
 <summary><strong>관리자의 상품 등록 - POST /product/admin/register</strong></summary>
@@ -721,6 +745,31 @@ sequenceDiagram
   ```json
   {
     "success": true
+  }
+  ```
+</details>
+
+
+
+<details>
+<summary><strong>장바구니 상품 수량 변경 - POST /cart/change</strong></summary>
+
+- **HTTP Method**: `POST`
+- **URL**: `/cart/change`
+- **Request JSON**:
+  ```json
+  {
+    "userToken": "사용자_토큰",
+    "request": {
+      "productOptionId": 12345,
+      "optionCount": 2
+    }
+  }
+  ```
+- **Return JSON**:
+  ```json
+  {
+    "changeProductCount": 2
   }
   ```
 </details>
