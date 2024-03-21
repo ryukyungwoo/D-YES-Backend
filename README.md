@@ -470,23 +470,262 @@ sequenceDiagram
 ## 에이피아이 스펙
 
 <details>
-<summary><strong>장바구니 상품 담기 - POST /cart/contain</strong></summary>
-<br>
+<summary><strong>관리자의 상품 등록 - POST /product/admin/register</strong></summary>
 
-- **HTTP Method**: POST
-- **URL**: `/cart/contain`
-- **BODY (요청 데이터)**:
+- **HTTP Method**: `POST`
+- **URL**: `/product/admin/register`
+- **Request JSON**:
+    ```json
+    {
+        "userToken": "사용자_토큰_값",
+        "productRegisterRequest": {
+            "productName": "테스트상품2",
+            "productDescription": "테스트다2",
+            "cultivationMethod": "PESTICIDE_FREE",
+            "produceType": "VEGETABLE"
+        },
+        "productOptionRegisterRequest": [
+            {
+                "optionName": "양파 1KG",
+                "optionPrice": 56000,
+                "stock": 10,
+                "value": 1,
+                "unit": "KG"
+            },
+            {
+                "optionName": "양파 2KG",
+                "optionPrice": 160000,
+                "stock": 10,
+                "value": 2,
+                "unit": "KG"
+            }
+        ],
+        "productMainImageRegisterRequest": {
+            "mainImg": "main_image_onion.jpg"
+        },
+        "productDetailImagesRegisterRequests": [
+            {
+                "detailImgs": "onion_detail_image1.jpg"
+            },
+            {
+                "detailImgs": "onion_detail_image2.jpg"
+            }
+        ],
+        "farmName": "농장명"
+    }
+    ```
+- **Return JSON**:
+    ```json
+    {
+        "success": true
+    }
+    ```
+</details>
+
+
+<details>
+<summary><strong>관리자의 상품 읽기(상세 정보) - GET /product/admin/read/{productId}</strong></summary>
+
+- **HTTP Method**: `GET`
+- **URL**: `/product/admin/read/{productId}`
+- **Path Variable**: `productId` - 상품의 고유 ID
+- **Return JSON**:
   ```json
   {
-    "userToken": "your_user_token_here",
-    "request": {
-      "productOptionId": 12345,
-      "optionCount": 2
+    "productResponseForAdmin": {
+      "productId": 1,
+      "productName": "상품명",
+      "productDescription": "상품 설명",
+      "cultivationMethod": "CULTIVATION_METHOD",
+      "produceType": "PRODUCE_TYPE",
+      "productSaleStatus": "SALE_STATUS"
+    },
+    "optionResponseForAdmin": [
+      {
+        "optionId": 1,
+        "optionName": "옵션명",
+        "optionPrice": 10000,
+        "stock": 100,
+        "value": 1,
+        "unit": "UNIT",
+        "optionSaleStatus": "SALE_STATUS"
+      }
+    ],
+    "mainImageResponseForAdmin": {
+      "mainImageId": 1,
+      "mainImg": "메인 이미지 URL"
+    },
+    "detailImagesForAdmin": [
+      {
+        "detailImageId": 1,
+        "detailImgs": "상세 이미지 URL"
+      }
+    ],
+    "farmInfoResponseForAdmin": {
+      "farmId": 1,
+      "farmName": "농장 이름",
+      "csContactNumber": "고객센터 번호",
+      "farmAddress": {
+        "address": "농장 주소",
+        "zipCode": "우편번호",
+        "detail": "상세 주소"
+      },
+      "mainImage": "농장 메인 이미지 URL",
+      "introduction": "농장 소개",
+      "produceTypes": ["PRODUCE_TYPE"]
+    },
+    "farmOperationInfoResponseForAdmin": {
+      "farmOperationId": 1,
+      "businessName": "사업자 명",
+      "businessNumber": "사업자 번호",
+      "representativeName": "대표자 이름",
+      "representativeContactNumber": "대표자 연락처"
     }
   }
-Response Parameters (Response Sample): void (성공 시 특정 응답 본문 없음)
-Result Code: 200 OK for success; 400 Bad Request for invalid request
 </details>
+
+
+<details>
+<summary><strong>레시피 읽기 - GET /recipe/read/{recipeId}</strong></summary>
+
+- **HTTP Method**: `GET`
+- **URL**: `/recipe/read/{recipeId}`
+- **Path Variable**: 
+  - `recipeId` - 레시피의 고유 ID
+- **Return JSON**:
+  ```json
+  {
+    "nickName": "닉네임",
+    "recipeRegisterRequest": {
+      "recipeName": "레시피 이름"
+    },
+    "recipeContentRegisterRequest": {
+      "recipeDetails": ["레시피 단계별 설명"],
+      "recipeDescription": "레시피 간략한 설명",
+      "cookingTime": "조리 시간",
+      "difficulty": "난이도"
+    },
+    "recipeCategoryRegisterRequest": {
+      "recipeMainCategory": "레시피 주 카테고리",
+      "recipeSubCategory": "레시피 부 카테고리"
+    },
+    "recipeIngredientRegisterRequest": {
+      "servingSize": 4,
+      "mainIngredient": "주 재료",
+      "mainIngredientAmount": "주 재료 양",
+      "otherIngredientList": [
+        {
+          "ingredientName": "기타 재료 이름",
+          "ingredientAmount": "기타 재료 양"
+        }
+      ],
+      "seasoningList": [
+        {
+          "ingredientName": "양념 이름",
+          "ingredientAmount": "양념 양"
+        }
+      ]
+    },
+    "recipeMainImageRegisterRequest": {
+      "recipeMainImage": "레시피 메인 이미지 URL"
+    }
+  }
+</details>
+
+
+<details>
+<summary><strong>사용자의 문의 리스트 읽기 - GET /inquiry/user-list/{userToken}</strong></summary>
+
+- **HTTP Method**: `GET`
+- **URL**: `/inquiry/user-list/{userToken}`
+- **Path Variable**: 
+  - `userToken` - 사용자 토큰
+- **Return JSON**:
+  ```json
+  [
+    {
+      "inquiryId": 1,
+      "title": "문의 제목",
+      "inquiryType": "문의 유형",
+      "inquiryStatus": "문의 상태",
+      "createDate": "생성 날짜"
+    },
+    {
+      "inquiryId": 2,
+      "title": "두 번째 문의 제목",
+      "inquiryType": "문의 유형",
+      "inquiryStatus": "문의 상태",
+      "createDate": "생성 날짜"
+    }
+  ]
+</details>
+
+<details>
+<summary><strong>상품 상세 페이지에서 사용자의 리뷰 리스트 읽기 - GET /review/list/{productId}</strong></summary>
+
+- **HTTP Method**: `GET`
+- **URL**: `/review/list/{productId}`
+- **Path Variable**: 
+  - `productId` - 상품의 고유 ID
+- **Return JSON**:
+  ```json
+  {
+    "reviewRequestResponse": {
+      "productName": "상품명",
+      "optionNameList": ["옵션명1", "옵션명2"],
+      "content": "리뷰 내용",
+      "userNickName": "사용자 닉네임",
+      "createDate": "리뷰 작성 날짜",
+      "purchaseDate": "구매 날짜",
+      "rating": 5
+    },
+    "imagesResponseList": [
+      {
+        "reviewImageId": 1,
+        "reviewImages": "리뷰 이미지 URL1"
+      },
+      {
+        "reviewImageId": 2,
+        "reviewImages": "리뷰 이미지 URL2"
+      }
+    ]
+  }
+</details>
+
+
+
+<details>
+<summary><strong>카카오 상품 환불 - POST /order/payment/kakao/refund</strong></summary>
+
+- **HTTP Method**: `POST`
+- **URL**: `/order/payment/kakao/refund`
+- **Request JSON**:
+  ```json
+  {
+    "orderAndTokenAndReasonRequest": {
+      "userToken": "사용자_토큰",
+      "orderId": 12345,
+      "refundReason": "환불 사유"
+    },
+    "requestList": [
+      {
+        "productOptionId": 67890
+      },
+      {
+        "productOptionId": 98765
+      }
+    ]
+  }
+  ```
+- **Return JSON**:
+  ```json
+  {
+    "success": true
+  }
+  ```
+</details>
+
+
 
 ---
 
